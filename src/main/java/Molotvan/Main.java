@@ -35,6 +35,7 @@ public class Main {
         XmlBuilder.createXML();
         writeString(parseXML("data.xml"), "new_data.json");
         System.out.println(jsonToList(readString("new_data.json")));
+        System.out.println(listToJson(employees));
     }
 
     public static List<Employee> parseCSV(String[] columnMapping, String fileName) {

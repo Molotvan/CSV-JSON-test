@@ -28,4 +28,13 @@ public class Employee {
                 "age='" + age + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this.id == ((Employee) obj).id){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
