@@ -22,7 +22,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{"+"id='" + id  + '\'' +
+        return "Employee{" + "id='" + id + '\'' +
                 "firstName='" + firstName + '\'' +
                 "lastName='" + lastName + '\'' +
                 "country='" + country + '\'' +
@@ -32,9 +32,9 @@ public class Employee {
 
     @Override
     public boolean equals(Object obj) {
-        if(this.id == ((Employee) obj).id){
+        if (this.id.equals(((Employee) obj).id)) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -43,31 +43,40 @@ public class Employee {
     public String getFirstName() {
         return firstName;
     }
-    public void setFirstName(String firstName){
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
-    public void setLastName(String lastName){
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public long getId(){
+
+    public long getId() {
         return id;
     }
-    public void setId(long id){
+
+    public void setId(long id) {
         this.id = id;
     }
-    public String getCountry(){
+
+    public String getCountry() {
         return country;
     }
-    public void setCountry(String country){
+
+    public void setCountry(String country) {
         this.country = country;
     }
-    public int getAge(){
+
+    public int getAge() {
         return age;
     }
-    public void setAge(int age){
+
+    public void setAge(int age) {
         this.age = age;
     }
 }
