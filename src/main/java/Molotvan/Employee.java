@@ -1,5 +1,6 @@
 package Molotvan;
 
+
 public class Employee {
     public Long id;
     public String firstName;
@@ -22,7 +23,7 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{"+"id='" + id  + '\'' +
-                "firstname='" + firstName + '\'' +
+                "firstName='" + firstName + '\'' +
                 "lastName='" + lastName + '\'' +
                 "country='" + country + '\'' +
                 "age='" + age + '\'' +
@@ -36,5 +37,37 @@ public class Employee {
         }else{
             return false;
         }
+    }
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    public long getId(){
+        return id;
+    }
+    public void setId(long id){
+        this.id = id;
+    }
+    public String getCountry(){
+        return country;
+    }
+    public void setCountry(String country){
+        this.country = country;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
     }
 }
