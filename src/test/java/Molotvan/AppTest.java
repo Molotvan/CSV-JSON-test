@@ -19,7 +19,7 @@ public class AppTest {
 
     @Test
     public void testListToJson() {
-        final String expected = new String("[{\"id\":2,\"firstName\":\"Peter\",\"lastName\":\"Petrov\",\"country\":\"RU\",\"age\":38},{\"id\":4,\"firstName\":\"Michael\",\"lastName\":\"Jackson\",\"country\":\"UK\",\"age\":29}]");
+        final String expected = "[{\"id\":2,\"firstName\":\"Peter\",\"lastName\":\"Petrov\",\"country\":\"RU\",\"age\":38},{\"id\":4,\"firstName\":\"Michael\",\"lastName\":\"Jackson\",\"country\":\"UK\",\"age\":29}]";
         final String result = Main.listToJson(data());
         assertEquals(expected, result);
     }
@@ -28,11 +28,7 @@ public class AppTest {
     public void testWriteString() {
         final String argument2 = "data2.json";
         Main.writeString(data(), argument2);
-        assertTrue(new File(argument2).exists());
-        if (new File(argument2).exists()) {
-            File file = new File(argument2);
-            file.delete();
-        }
+        assertTrue(new File(argument2).delete());
     }
 
     @Test
